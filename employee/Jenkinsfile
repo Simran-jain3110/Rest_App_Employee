@@ -21,7 +21,7 @@ stage('Compile')
 {
 steps{
 echo "Compiling the Project.........."
-bat "mvn -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
+bat "mvn compile -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
 }
 }
 stage('Deploy') 
