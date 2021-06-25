@@ -14,7 +14,7 @@ stage('Test')
 {
 steps{
 echo "Testing the Code.........."
-bat "mvn -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
+bat "mvn test -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
 }
 }
 stage('Compile') 
