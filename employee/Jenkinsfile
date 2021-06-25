@@ -1,21 +1,35 @@
-pipeline {
-    agent any
-    stages {
-        stage('---clean---') {
-            steps {
-                bat "mvn clean -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
-            }
-        }
-        stage('--test--') {
-            steps {
-                bat "mvn test -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
-            }
-        }
-        stage('--package--') {
-            steps {
-                bat "mvn package -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
-            }
-        }
-     
-    }
+pipeline{
+agent any
+stages 
+{
+stage('Build') 
+{
+steps{
+echo "Building the Code.........."
+ bat "mvn clean -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
+
 }
+}
+stage('Test') 
+{
+steps{
+echo "Testing the Code.........."
+bat "mvn -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
+}
+}
+stage('Compile') 
+{
+steps{
+echo "Compiling the Project.........."
+bat "mvn -f C:\\Users\\simranjain\\git\\repository9\\employee\\pom.xml"
+}
+}
+stage('Deploy') 
+{
+steps{
+echo "Deploying the Project.........."
+}
+}
+}
+
+
